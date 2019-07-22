@@ -6,20 +6,21 @@ import Img from "gatsby-image"
 
 const getImages = graphql`
   query Images {
-    fixed: file(relativePath: { eq: "Web-design.jpg" }) {
+    fixed: file(relativePath: { eq: "Webdesign.jpg" }) {
       childImageSharp {
         fixed(width: 150, height: 150, grayscale: true) {
           ...GatsbyImageSharpFixed
         }
       }
     }
-    fluid: file(relativePath: { eq: "blogBcg.jpeg" }) {
+    fluid: file(relativePath: { eq: "blog.jpg" }) {
       childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid_tracedSVG
         }
       }
     }
+     
   }
 `
 

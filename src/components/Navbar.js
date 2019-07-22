@@ -5,6 +5,7 @@ import { FaAlignRight } from "react-icons/fa"
 import links from "../constants/links"
 import socialIcons from "../constants/social-icons"
 import logo from "../images/logo.svg"
+import Headroom from "react-headroom"
 const Navbar = () => {
   const [isOpen, setNav] = useState();
   const toggleNav = () => {
@@ -12,6 +13,7 @@ const Navbar = () => {
   };
 
   return (
+    <Headroom>
     <nav className={styles.navbar}>
       <div className={styles.navCenter}>
         <div className={styles.navHeader}>
@@ -53,6 +55,7 @@ const Navbar = () => {
         </div>
       </div>
     </nav>
+    </Headroom>
   )
 };
 
